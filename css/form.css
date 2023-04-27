@@ -1,12 +1,23 @@
 .form {
-	display: grid;
 	margin: 0 auto;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-items: center;
+	align-items: center;
+	display: grid;
 	gap: 16px;
+}
+
+.form__inner {
+	align-items: center;
+	display: grid;
+	gap: 16px;
+	width: 100%;
+	max-width: 400px;
 }
 
 .form__label {
 	display: block;
+	width: 100%;
 }
 
 .form__button,
@@ -42,7 +53,7 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background-image: url(./img/select.png);
+	background-image: url(../img/select.png);
 	background-repeat: no-repeat;
 	background-position: right 5px center;
 }
@@ -51,4 +62,27 @@
 	background-color: #ff6347;
 	color: #ffffff;
 	font-weight: 900;
+}
+
+.form__price {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+}
+
+.form__price-new,
+.form__price-old {
+	padding: 0 4px;
+}
+
+.form__price-old {
+	text-decoration: line-through;
+	font-size: 14px;
+}
+
+.form__price-new {
+	font-weight: 700;
+	color: #ff6347;
+	font-size: 18px;
 }
